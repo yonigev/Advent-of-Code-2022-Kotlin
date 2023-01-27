@@ -5,14 +5,17 @@ plugins {
     application
 }
 
-group = "me.jonathan"
-version = "1.0-SNAPSHOT"
+version = "0.0"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+
+    implementation("io.github.microutils:kotlin-logging-jvm:3.0.4")
+    implementation("ch.qos.logback:logback-classic:1.4.0")
+
     testImplementation(kotlin("test"))
 }
 

@@ -3,6 +3,7 @@ import puzzle.day1.Day1
 import puzzle.day2.Day2
 import puzzle.day3.Day3
 import puzzle.day4.Day4
+import puzzle.day5.Day5
 
 private val log = KotlinLogging.logger {}
 
@@ -12,7 +13,8 @@ fun main() {
 //        Day1(),
 //        Day2(),
 //        Day3(),
-        Day4()
+//        Day4(),
+        Day5()
     )
 
     puzzles.forEach {

@@ -1,6 +1,6 @@
-package puzzle.day5.parser
+package com.geva.jonathan.puzzle.day5.parser
 
-import puzzle.day5.CrateStack
+import com.geva.jonathan.puzzle.day5.CrateStack
 
 /**
  * Parse input text into stacks
@@ -18,13 +18,13 @@ class StacksParser : Parser<Array<CrateStack>> {
     }
 
     private fun extractCratesForLine(inputLine: String, stacks: Array<CrateStack>) {
-        var matched = Companion.CRATE_FINDER.find(inputLine)
+        var matched = CRATE_FINDER.find(inputLine)
 
         for (i in 1..stacks.size) {
             if (matched!!.groups["NOCRATE"]?.value == null) {
                 stacks[i - 1].addToTop(matched.groups["CRATE"]?.value?.get(0) ?: ' ')
             }
-            matched = Companion.CRATE_FINDER.find(inputLine, matched.range.last())
+            matched = CRATE_FINDER.find(inputLine, matched.range.last())
         }
     }
 

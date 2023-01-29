@@ -1,14 +1,13 @@
-package puzzle
+package com.geva.jonathan.puzzle
 
 import mu.KotlinLogging
-import java.io.File
 
 abstract class PuzzleSolver<T>(val day: Int) {
     val log = KotlinLogging.logger {}
-    var input: List<String> = readInput(day)
+    protected var input: List<String> = readInput(day)
 
     private fun readInput(day: Int): List<String> {
-        return File("src/main/resources/day$day.txt").readLines()
+        return object {}.javaClass.getResource("/input/day${day}.txt")?.readText()?.lines() ?: listOf()
     }
 
     abstract fun solvePart1(): T

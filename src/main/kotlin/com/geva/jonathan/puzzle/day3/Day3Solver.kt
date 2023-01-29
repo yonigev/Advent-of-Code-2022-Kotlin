@@ -1,8 +1,8 @@
-package puzzle.day3
+package com.geva.jonathan.puzzle.day3
 
-import puzzle.PuzzleSolver
+import com.geva.jonathan.puzzle.PuzzleSolver
 
-class Day3(day: Int = 3) : PuzzleSolver<Int>(day) {
+class Day3Solver(day: Int = 3) : PuzzleSolver<Int>(day) {
 
     override fun solvePart1(): Int {
         return input.fold(0) { acc, rucksack ->

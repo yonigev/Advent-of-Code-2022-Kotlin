@@ -1,20 +1,16 @@
-import mu.KotlinLogging
-import puzzle.day1.Day1
-import puzzle.day2.Day2
-import puzzle.day3.Day3
-import puzzle.day4.Day4
-import puzzle.day5.Day5
-
-private val log = KotlinLogging.logger {}
+import com.geva.jonathan.puzzle.day1.Day1Solver
+import com.geva.jonathan.puzzle.day2.Day2Solver
+import com.geva.jonathan.puzzle.day3.Day3Solver
+import com.geva.jonathan.puzzle.day4.Day4Solver
+import com.geva.jonathan.puzzle.day5.Day5Solver
 
 fun main() {
-
     val puzzles = listOf(
-//        Day1(),
-//        Day2(),
-//        Day3(),
-//        Day4(),
-        Day5()
+        Day1Solver(),
+        Day2Solver(),
+        Day3Solver(),
+        Day4Solver(),
+        Day5Solver()
     )
 
     puzzles.forEach {

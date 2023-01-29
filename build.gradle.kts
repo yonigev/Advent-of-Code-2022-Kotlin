@@ -12,15 +12,15 @@ repositories {
 }
 
 dependencies {
-
     implementation("io.github.microutils:kotlin-logging-jvm:3.0.4")
     implementation("ch.qos.logback:logback-classic:1.4.0")
 
-    testImplementation(kotlin("test"))
+    // Testing
+    testImplementation("org.junit.jupiter:junit-jupiter:5.+")
 }
 
 tasks.test {
-    useJUnit()
+    useJUnitPlatform()
 }
 
 tasks.withType<KotlinCompile>() {

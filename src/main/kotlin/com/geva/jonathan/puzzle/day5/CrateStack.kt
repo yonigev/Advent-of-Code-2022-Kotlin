@@ -1,4 +1,4 @@
-package puzzle.day5
+package com.geva.jonathan.puzzle.day5
 
 /**
  * A crate stack.

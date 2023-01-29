@@ -1,6 +1,6 @@
-package puzzle.day5.parser
+package com.geva.jonathan.puzzle.day5.parser
 
-import puzzle.day5.CraneInstruction
+import com.geva.jonathan.puzzle.day5.CraneInstruction
 val INSTRUCTION_LINE = Regex("^\\s*move ?(?<TIMES>\\d+) ?from ?(?<FROM>\\d+) ?to ?(?<TO>\\d+)\\s*\$")
 
 class InstructionsParser : Parser<List<CraneInstruction>> {

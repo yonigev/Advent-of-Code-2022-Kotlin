@@ -1,11 +1,11 @@
-package puzzle.day4
+package com.geva.jonathan.puzzle.day4
 
-import puzzle.PuzzleSolver
+import com.geva.jonathan.puzzle.PuzzleSolver
 
 const val ELF_SEPARATOR: Char = ','
 const val TASK_SEPARATOR: Char = '-'
 
-class Day4(day: Int = 4) : PuzzleSolver<Int>(day) {
+class Day4Solver(day: Int = 4) : PuzzleSolver<Int>(day) {
 
     override fun solvePart1(): Int {
         return input.fold(0) { acc, it ->

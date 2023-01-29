@@ -1,10 +1,10 @@
-package puzzle.day5
+package com.geva.jonathan.puzzle.day5
 
-import puzzle.PuzzleSolver
-import puzzle.day5.parser.InstructionsParser
-import puzzle.day5.parser.StacksParser
+import com.geva.jonathan.puzzle.PuzzleSolver
+import com.geva.jonathan.puzzle.day5.parser.InstructionsParser
+import com.geva.jonathan.puzzle.day5.parser.StacksParser
 
-class Day5(day: Int = 5) : PuzzleSolver<String>(day) {
+class Day5Solver(day: Int = 5) : PuzzleSolver<String>(day) {
     private val stacksParser = StacksParser()
     private val instructionsParser = InstructionsParser()
 
@@ -39,7 +39,7 @@ class Day5(day: Int = 5) : PuzzleSolver<String>(day) {
         (0 until instruction.times).forEach { _ ->
             val crate = sourceStack.removeFromTop()
             destStack.addToTop(crate)
-            log.info { "Moved crate $crate from stack ${instruction.sourceStack} to ${instruction.destStack} " }
+            log.debug { "Moved crate $crate from stack ${instruction.sourceStack} to ${instruction.destStack} " }
         }
     }
 }

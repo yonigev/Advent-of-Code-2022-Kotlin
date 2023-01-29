@@ -1,6 +1,6 @@
-package puzzle.day5
+package com.geva.jonathan.puzzle.day5
 
-import puzzle.day5.parser.INSTRUCTION_LINE
+import com.geva.jonathan.puzzle.day5.parser.INSTRUCTION_LINE
 
 data class CraneInstruction(val times: Int, val sourceStack: Int, val destStack: Int) {
     constructor(rawInput: String) : this(

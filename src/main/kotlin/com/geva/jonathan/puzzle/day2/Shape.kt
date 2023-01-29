@@ -1,4 +1,4 @@
-package puzzle.day2
+package com.geva.jonathan.puzzle.day2
 
 enum class Shape {
     ROCK, PAPER, SCISSORS;

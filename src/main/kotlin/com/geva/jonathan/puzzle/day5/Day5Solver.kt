@@ -4,18 +4,18 @@ import com.geva.jonathan.puzzle.PuzzleSolver
 import com.geva.jonathan.puzzle.day5.parser.InstructionsParser
 import com.geva.jonathan.puzzle.day5.parser.StacksParser
 
-class Day5Solver(day: Int = 5) : PuzzleSolver<String>(day) {
+class Day5Solver(day: Int = 5) : PuzzleSolver<List<String>, String>(day) {
     private val stacksParser = StacksParser()
     private val instructionsParser = InstructionsParser()
 
-    override fun solvePart1(): String {
+    override fun solvePart1(input: List<String>): String {
         val stacks: Array<CrateStack> = stacksParser.parse(input)
         val instructions = instructionsParser.parse(input)
         instructions.forEach { performInstruction(it, stacks) }
         return String(stacks.map { it.peekTop() }.toCharArray())
     }
 
-    override fun solvePart2(): String {
+    override fun solvePart2(input: List<String>): String {
         val stacks: Array<CrateStack> = stacksParser.parse(input)
         val instructions = instructionsParser.parse(input)
         instructions.forEach { performInstruction(it, stacks, stable = true) }

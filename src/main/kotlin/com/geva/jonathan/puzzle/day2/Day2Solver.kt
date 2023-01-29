@@ -2,7 +2,7 @@ package com.geva.jonathan.puzzle.day2
 
 import com.geva.jonathan.puzzle.PuzzleSolver
 
-class Day2Solver(day: Int = 2) : PuzzleSolver<Int>(day) {
+class Day2Solver(day: Int = 2) : PuzzleSolver<List<String>, Int>(day) {
 
     /**
      * Score for the selected shape
@@ -27,7 +27,7 @@ class Day2Solver(day: Int = 2) : PuzzleSolver<Int>(day) {
         }
     }
 
-    override fun solvePart1(): Int {
+    override fun solvePart1(input: List<String>): Int {
         var score = 0
         input.forEach {
             val opponentShape = Shape.forInputChar(it[0])
@@ -43,7 +43,7 @@ class Day2Solver(day: Int = 2) : PuzzleSolver<Int>(day) {
         return score
     }
 
-    override fun solvePart2(): Int {
+    override fun solvePart2(input: List<String>): Int {
         var score = 0
         input.forEach {
             val opponentShape = Shape.forInputChar(it[0])

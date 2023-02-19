@@ -7,14 +7,14 @@ const val TASK_SEPARATOR: Char = '-'
 
 class Day4Solver(day: Int = 4) : PuzzleSolver<Int>(day) {
 
-    override fun solvePart1(): Int {
+    override fun solvePart1(input: List<String>): Int {
         return input.fold(0) { acc, it ->
             val (elf1Tasks, elf2Tasks) = getElfTasks(it)
             acc + if (elf1Tasks.fullyContains(elf2Tasks) || elf2Tasks.fullyContains(elf1Tasks)) 1 else 0
         }
     }
 
-    override fun solvePart2(): Int {
+    override fun solvePart2(input: List<String>): Int {
         return input.fold(0) { acc, it ->
             val (elf1Tasks, elf2Tasks) = getElfTasks(it)
             acc + if (elf1Tasks.overlaps(elf2Tasks)) 1 else 0

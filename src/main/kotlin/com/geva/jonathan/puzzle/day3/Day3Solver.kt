@@ -4,7 +4,7 @@ import com.geva.jonathan.puzzle.PuzzleSolver
 
 class Day3Solver(day: Int = 3) : PuzzleSolver<Int>(day) {
 
-    override fun solvePart1(): Int {
+    override fun solvePart1(input: List<String>): Int {
         return input.fold(0) { acc, rucksack ->
             acc + findCommonChars(
                 rucksack.substring(0, rucksack.length / 2),
@@ -12,7 +12,7 @@ class Day3Solver(day: Int = 3) : PuzzleSolver<Int>(day) {
         }
     }
 
-    override fun solvePart2(): Int {
+    override fun solvePart2(input: List<String>): Int {
         return (input.indices step 3).fold(0) { acc, i ->
             acc + findCommonChars(
                 findCommonChars(input[i], input[i + 1]).joinToString(""),

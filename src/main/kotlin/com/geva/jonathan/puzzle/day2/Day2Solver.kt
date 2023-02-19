@@ -27,7 +27,7 @@ class Day2Solver(day: Int = 2) : PuzzleSolver<Int>(day) {
         }
     }
 
-    override fun solvePart1(): Int {
+    override fun solvePart1(input: List<String>): Int {
         var score = 0
         input.forEach {
             val opponentShape = Shape.forInputChar(it[0])
@@ -43,7 +43,7 @@ class Day2Solver(day: Int = 2) : PuzzleSolver<Int>(day) {
         return score
     }
 
-    override fun solvePart2(): Int {
+    override fun solvePart2(input: List<String>): Int {
         var score = 0
         input.forEach {
             val opponentShape = Shape.forInputChar(it[0])

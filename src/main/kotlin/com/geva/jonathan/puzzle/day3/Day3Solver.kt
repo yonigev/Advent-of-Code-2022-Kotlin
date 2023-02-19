@@ -2,7 +2,7 @@ package com.geva.jonathan.puzzle.day3
 
 import com.geva.jonathan.puzzle.PuzzleSolver
 
-class Day3Solver(day: Int = 3) : PuzzleSolver<List<String>, Int>(day) {
+class Day3Solver(day: Int = 3) : PuzzleSolver<Int>(day) {
 
     override fun solvePart1(input: List<String>): Int {
         return input.fold(0) { acc, rucksack ->

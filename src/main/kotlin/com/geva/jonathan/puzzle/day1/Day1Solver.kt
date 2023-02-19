@@ -2,7 +2,7 @@ package com.geva.jonathan.puzzle.day1
 
 import com.geva.jonathan.puzzle.PuzzleSolver
 
-class Day1Solver(day: Int = 1) : PuzzleSolver<List<String>, Int>(day) {
+class Day1Solver(day: Int = 1) : PuzzleSolver<Int>(day) {
 
     override fun solvePart1(input: List<String>): Int {
         val calories = createElvesCaloriesArray(input)

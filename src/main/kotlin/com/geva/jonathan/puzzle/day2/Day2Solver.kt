@@ -2,7 +2,7 @@ package com.geva.jonathan.puzzle.day2
 
 import com.geva.jonathan.puzzle.PuzzleSolver
 
-class Day2Solver(day: Int = 2) : PuzzleSolver<List<String>, Int>(day) {
+class Day2Solver(day: Int = 2) : PuzzleSolver<Int>(day) {
 
     /**
      * Score for the selected shape

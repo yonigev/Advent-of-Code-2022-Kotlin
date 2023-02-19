@@ -4,7 +4,7 @@ import com.geva.jonathan.puzzle.PuzzleSolver
 import com.geva.jonathan.puzzle.day5.parser.InstructionsParser
 import com.geva.jonathan.puzzle.day5.parser.StacksParser
 
-class Day5Solver(day: Int = 5) : PuzzleSolver<List<String>, String>(day) {
+class Day5Solver(day: Int = 5) : PuzzleSolver<String>(day) {
     private val stacksParser = StacksParser()
     private val instructionsParser = InstructionsParser()
 

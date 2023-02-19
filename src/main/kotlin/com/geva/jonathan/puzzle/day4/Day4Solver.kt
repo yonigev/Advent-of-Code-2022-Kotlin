@@ -5,7 +5,7 @@ import com.geva.jonathan.puzzle.PuzzleSolver
 const val ELF_SEPARATOR: Char = ','
 const val TASK_SEPARATOR: Char = '-'
 
-class Day4Solver(day: Int = 4) : PuzzleSolver<List<String>, Int>(day) {
+class Day4Solver(day: Int = 4) : PuzzleSolver<Int>(day) {
 
     override fun solvePart1(input: List<String>): Int {
         return input.fold(0) { acc, it ->

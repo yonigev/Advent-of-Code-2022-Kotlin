@@ -1,16 +1,15 @@
-import com.geva.jonathan.puzzle.day1.Day1Solver
-import com.geva.jonathan.puzzle.day2.Day2Solver
-import com.geva.jonathan.puzzle.day3.Day3Solver
-import com.geva.jonathan.puzzle.day4.Day4Solver
-import com.geva.jonathan.puzzle.day5.Day5Solver
+import com.geva.jonathan.puzzle.day7.Day7Solver
 
 fun main() {
     val puzzles = listOf(
-        Day1Solver(),
-        Day2Solver(),
-        Day3Solver(),
-        Day4Solver(),
-        Day5Solver()
+//        Day1Solver(),
+//        Day2Solver(),
+//        Day3Solver(),
+//        Day4Solver(),
+//        Day5Solver(),
+//        Day6Solver(),
+        Day7Solver()
+
     )
 
     puzzles.forEach {
